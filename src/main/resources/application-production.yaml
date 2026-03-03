@@ -1,10 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-d6j5861r0fns73bh700g-a.oregon-postgres.render.com:5432/ducks_tzl6
-    username: ducks_user
-    password: PVvML1JkteeZoXWyoUdECbcgYI2tQ6wF
+    url: jdbc:postgresql://${database_host}:5432/${database_name}
+    username: ${database_username}
+    password: ${database_password}
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
